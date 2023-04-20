@@ -3,7 +3,7 @@ import React, {
 } from 'react';
 import { Modal } from 'antd';
 import PropTypes from 'prop-types';
-import cloud from '../api/cloud';
+import upload from '../api/upload';
 
 export const Context = React.createContext();
 
@@ -29,8 +29,8 @@ function UploadContainer({ children }) {
     }
     setIsFetching(false);
   });
-  const fetcher = Object.keys(cloud).map(
-    (key) => ({ [`${key}Api`]: (params) => fetchData(key, cloud[key], params) }),
+  const fetcher = Object.keys(upload).map(
+    (key) => ({ [`${key}Api`]: (params) => fetchData(key, upload[key], params) }),
   ).reduce((a, b) => ({
     ...a,
     ...b,

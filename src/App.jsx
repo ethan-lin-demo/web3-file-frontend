@@ -11,7 +11,7 @@ loader.config({ paths: { vs: '/monaco-editor/min/vs' } });
 
 function App() {
   const { localTheme, setLocalTheme } = useTheme();
-  const routes = ['', 'clouds', 'detail'];
+  const routes = ['', 'upload'];
 
   return (
     <div className="App">

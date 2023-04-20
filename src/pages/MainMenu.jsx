@@ -30,9 +30,9 @@ function MainMenu({ localTheme, setLocalTheme }) {
                   e.preventDefault();
                   navigate('/upload');
                 }}
-                href="#clouds"
+                href="#upload"
               >
-                Clouds
+                Upload
               </a>
             </Menu.Item>
           ),
