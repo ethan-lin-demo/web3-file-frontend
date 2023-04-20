@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { loader } from '@monaco-editor/react';
 import { ConfigProvider, theme } from 'antd';
 import MainMenu from './pages/MainMenu';
-import CloudPage from './pages/CloudPage';
+import MainPage from './pages/MainPage';
 import useTheme from './hooks/localStorage';
 import './App.css';
 
@@ -26,7 +26,7 @@ function App() {
             {routes.map((route) => (
               <Route
                 path={`/${route}`}
-                element={<CloudPage route={route} />}
+                element={<MainPage route={route} />}
                 key={`___${route}`}
               />
             ))}

@@ -4,7 +4,7 @@ import {
   Button, Checkbox, Form, Input,
 } from 'antd';
 import { useNavigate } from 'react-router-dom';
-import { Context } from '../../containers/Cloud';
+import { Context } from '../../containers/Upload';
 
 function Login() {
   const navigate = useNavigate();
@@ -20,13 +20,13 @@ function Login() {
   useEffect(() => {
     if (login) {
       localStorage.password = login;
-      navigate('/clouds');
+      navigate('/upload');
     }
   }, [login]);
 
   useEffect(() => {
     if (localStorage.password) {
-      navigate('/clouds');
+      navigate('/upload');
     }
   }, []);
 

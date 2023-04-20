@@ -7,7 +7,7 @@ import cloud from '../api/cloud';
 
 export const Context = React.createContext();
 
-function CloudContainer({ children }) {
+function UploadContainer({ children }) {
   const [data, setData] = useState({});
   const [fetching, setIsFetching] = useState(false);
   const fetchData = useCallback(async (apiName, fetcher, params) => {
@@ -49,12 +49,12 @@ function CloudContainer({ children }) {
   );
 }
 
-CloudContainer.propTypes = {
+UploadContainer.propTypes = {
   children: PropTypes.node,
 };
 
-CloudContainer.defaultProps = {
+UploadContainer.defaultProps = {
   children: <div />,
 };
 
-export default CloudContainer;
+export default UploadContainer;

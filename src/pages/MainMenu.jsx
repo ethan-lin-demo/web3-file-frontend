@@ -22,13 +22,13 @@ function MainMenu({ localTheme, setLocalTheme }) {
           ),
         },
         {
-          key: 'clouds',
+          key: 'upload',
           label: (
             <Menu.Item>
               <a
                 onClick={(e) => {
                   e.preventDefault();
-                  navigate('/clouds');
+                  navigate('/upload');
                 }}
                 href="#clouds"
               >

@@ -1,9 +1,9 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Table } from 'antd';
-import { Context } from '../../containers/Cloud';
+import { Context } from '../../containers/Upload';
 
-function Clouds() {
+function Upload() {
   const navigate = useNavigate();
   const {
     clouds,
@@ -41,4 +41,4 @@ function Clouds() {
   return <Table columns={columns} dataSource={clouds} loading={fetching} />;
 }
 
-export default Clouds;
+export default Upload;
