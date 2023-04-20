@@ -1,0 +1,27 @@
+name: actions
+
+on: [push]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Use Node.js 18.x
+      uses: actions/setup-node@master
+      with:
+        node-version: 18.x
+    - name: Build
+      run: |
+          yarn
+          yarn build
+          cd build
+          cp index.html 404.html
+          git config --global user.email "you@example.com"
+          git config --global user.name "Your Name"
+          git init
+          git add .
+          git commit -m "first commit"
+          git branch -M master
+          git remote add origin https://x-access-token:${{ secrets.ACCESS_TOKEN }}@github.com/ethan-lin-demo/ethan-lin-demo.github.io.git
+          git push -u -f origin master
