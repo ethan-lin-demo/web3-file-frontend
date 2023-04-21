@@ -24,17 +24,15 @@ function MainMenu({ localTheme, setLocalTheme }) {
         {
           key: 'upload',
           label: (
-            <Menu.Item>
-              <a
-                onClick={(e) => {
-                  e.preventDefault();
-                  navigate('/upload');
-                }}
-                href="#upload"
-              >
-                Upload
-              </a>
-            </Menu.Item>
+            <a
+              onClick={(e) => {
+                e.preventDefault();
+                navigate('/upload');
+              }}
+              href="#upload"
+            >
+              Upload
+            </a>
           ),
         },
       ]}
